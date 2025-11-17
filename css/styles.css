@@ -428,14 +428,14 @@ textarea {
 .checkbox .icon {
   display: flex;
   align-items: center;
-  background-image: url(/images/checkbox.svg);
+  background-image: url(../images/checkbox.svg);
   width: 16px;
   height: 15px;
   margin-right: 8px;
 }
 
 .form-field-checkbox:checked + .icon {
-  background-image: url(/images/checked.svg);
+  background-image: url(../images/checked.svg);
   display: flex;
   align-items: center;
   width: 16px;
