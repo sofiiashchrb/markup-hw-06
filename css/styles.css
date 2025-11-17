@@ -338,26 +338,6 @@ img {
   pointer-events: none;
 }
 
-/* .modal .label::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 45%;
-  left: 12px;
-  background-repeat: no-repeat;
-  background-image: url(../images/phone-black-18dp\ 1.svg);
-  pointer-events: none;
-} */
-
-/* .modal .label:first-child:before {
-  background-image: url(../images/person-black-18dp\ 1.svg);
-} */
-
-/* .modal .label:last-child:before {
-  background-image: url(../images/email-black-18dp\ 1.svg);
-} */
 .label:hover,
 .label:focus-within {
   fill: var(--accent-color);
@@ -378,18 +358,6 @@ img {
   border-color: var(--accent-color);
   outline: none;
 }
-
-/* .label .icon-item {
-  fill: var(--title-text-color);
-}
-
-.label:hover .icon-item {
-  fill: var(--accent-color);
-} */
-
-/* .label:focus-within .icon-item {
-  fill: var(--accent-color);
-} */
 
 .label:hover .icon-close,
 .label:focus .icon-close {
@@ -835,11 +803,16 @@ textarea {
 .email-input:hover,
 .email-input:focus {
   border-color: var(--accent-color);
-  color: var(--accent-color);
+  outline: none;
 }
 
 .email-input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input:hover::placeholder {
+  color: var(--accent-color);
 }
 
 .subscribe-button {
