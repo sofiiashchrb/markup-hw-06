@@ -8,17 +8,17 @@
   --background-dark-color: #2f303a;
 }
 
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
   color: var(--title-text-color);
   font-family: "Roboto", "Arial", sans-serif;
-  *,
-  ::before,
-  ::after {
-    box-sizing: border-box;
-  }
-  display: inline-block;
-  width: 100%;
+
+  margin: 0;
 }
 
 h1,
@@ -139,6 +139,7 @@ img {
   display: flex;
   margin-left: auto;
   align-items: center;
+  fill: var(--text-color);
 }
 
 .contact-nav a {
@@ -150,17 +151,6 @@ img {
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contact-nav {
-  fill: var(--text-color);
-}
-
-.contact-nav :hover,
-.contact-nav :focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
-
 .contact-nav.item {
   display: flex;
   align-items: center;
@@ -169,6 +159,12 @@ img {
 
 .contact-nav .item + .item {
   margin-left: 40px;
+}
+
+.contact-nav :hover,
+.contact-nav :focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contact-nav .icon-mail {
@@ -287,7 +283,7 @@ img {
   height: 30px;
   right: 8px;
   top: 8px;
-  border: 1px solid rgba(00, 00, 00, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   padding: 0;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -296,7 +292,7 @@ img {
 
 .modal .close:hover,
 .modal .close:focus {
-  box-shadow: 0 4px 4px 0 rgba(00, 00, 00, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   fill: var(--accent-color);
 }
 
@@ -460,14 +456,13 @@ textarea {
   text-align: center;
   border: none;
   border-radius: 4px;
-  box-shadow: 0 4px 4px 0 rgba(00, 00, 00, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .send-button:hover,
 .send-button:focus {
-  box-shadow: 0 4px 4px 0 rgba(00, 00, 00, 0.25),
-    0 4px 4px 0 rgba(00, 00, 00, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* section advantages */
@@ -780,7 +775,7 @@ textarea {
   color: var(--accent-color);
 }
 
-.form-field {
+.footer-form {
   display: flex;
   flex-direction: row;
   gap: 12px;
@@ -790,14 +785,13 @@ textarea {
   padding-top: 15px;
   padding-bottom: 15px;
   width: 358px;
-  height: 50px;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   letter-spacing: 0.48px;
-  font-weight: 400px;
+  font-weight: 400;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .email-input:hover,
@@ -820,24 +814,24 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 10px;
+
   width: 200px;
   height: 50px;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-weight: 700px;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 0;
 
+  background-color: var(--accent-color);
   color: var(--primary-white-color);
+  fill: var(--primary-white-color);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.96px;
-  cursor: pointer;
   text-align: center;
-  margin-top: 0;
+
   border: none;
-  fill: var(--primary-white-color);
+  border-radius: 4px;
+  cursor: pointer;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
